@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Cuddly Swara HEHE! 🌚🐻💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sparkle-container"></div>
+
+    <section id="hero" class="active">
+        <div class="glass-card">
+            <h1>Hey, My Sweetest Bear! 🐻</h1>
+            <p>Ready for some Teddy Day cuddles?</p>
+            <button id="start-btn" onclick="nextSection('teddy-reveal-1')">Unwrap My Hug! 🥰</button>
+        </div>
+    </section>
+
+    <section id="teddy-reveal-1" class="hidden">
+        <div class="meme-card">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N2enRtdWVnMHdwajN3M2h2YzI4bmR1NnExZHVzMWpsOHFocWtxb2QmZXA9dnMxX2ludGVlX2dpZnNfY2xpY2smY3Q9Zw/2vn73sX2I3H2O/giphy.gif" alt="Teddy Meme">
+            <p>"You're my favorite teddy bear, even when you're not fuzzy and stuffed... and I bet you're always cuddly!"</p>
+            <button onclick="nextSection('teddy-reveal-2')">Another Cuddle! 💖</button>
+        </div>
+    </section>
+
+    <section id="teddy-reveal-2" class="hidden">
+        <div class="meme-card">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGdkMG1nbWd0eGEyZHB6emg5enI5dG5wMnZ5bW93Z2M2cXZ4N2Q0aiZlcD12MV9pbnRlcm5hbF9naWZfY2xpY2smY3Q9Zw/VzD4xQ4mBzy64/giphy.gif" alt="Teddy Hug Meme">
+            <p>Every day with you feels like a warm teddy hug ever since I have got to know you. Love you my Kuchupuchu!</p>
+            <button onclick="nextSection('final-teddy')">The Biggest Hug! 🤗</button>
+        </div>
+    </section>
+
+    <section id="final-teddy" class="hidden">
+        <div class="glass-card">
+            <h2>Happy Teddy Day, Swara! 🐻💕</h2>
+            <p>May your day be filled with as much warmth and cuddles as you bring into my life!</p>
+            <div class="animated-teddies">🐻💖🧸🥰</div>
+            <button onclick="resetGame()">Send More Hugs? ✨</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
