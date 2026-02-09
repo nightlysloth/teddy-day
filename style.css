@@ -1,0 +1,93 @@
+:root {
+    --teddy-brown: #8B5A2B;
+    --honey-yellow: #FFD700;
+    --soft-pink: #FFC0CB;
+    --cream-white: #FFFDD0;
+    --accent-red: #E74C3C;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font for teddy theme */
+    background: linear-gradient(135deg, var(--cream-white), var(--soft-pink), var(--honey-yellow));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--teddy-brown);
+    text-align: center;
+}
+
+.hidden { display: none !important; }
+.active { display: flex !important; flex-direction: column; align-items: center; }
+
+.glass-card, .meme-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px); /* Softer blur for cuddly feel */
+    padding: 2rem;
+    border-radius: 35px; /* More rounded, plush look */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 85%;
+    max-width: 380px; /* Slightly wider for teddy images */
+    animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy intro */
+}
+
+img { 
+    width: 95%; /* Slightly smaller to give card more padding */
+    border-radius: 25px; 
+    margin-bottom: 1rem; 
+    border: 3px solid var(--honey-yellow); /* Teddy fur border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+button {
+    background: var(--teddy-brown);
+    color: var(--cream-white);
+    border: none;
+    padding: 16px 32px; /* A bit larger for touch */
+    border-radius: 60px; /* Super round, soft button */
+    font-weight: bold;
+    font-size: 1.2rem; /* Larger, friendly text */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 1.5rem; /* More space */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+}
+
+button:hover { background-color: var(--accent-red); } /* Little pop of love */
+button:active { transform: scale(0.95); }
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Sparkle Effects (Teddy Day version of hearts) */
+.sparkle {
+    position: absolute;
+    color: var(--honey-yellow);
+    font-size: 1.2rem;
+    animation: twinkle 3s ease-out forwards;
+    z-index: -1;
+    text-shadow: 0 0 5px rgba(255,215,0,0.5);
+}
+
+@keyframes twinkle {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(180deg) scale(0.5); opacity: 0; }
+}
+
+.animated-teddies { 
+    font-size: 2.5rem; /* Bigger emojis */
+    animation: sway 3s infinite ease-in-out; /* Gentle sway */
+    margin: 1.5rem 0;
+}
+@keyframes sway {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
